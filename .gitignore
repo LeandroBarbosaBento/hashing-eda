@@ -1,5 +1,5 @@
 #ignore bin files
-bin/
+bin/*
 
 #ignore hashing_methods executable
 hashing_methods
