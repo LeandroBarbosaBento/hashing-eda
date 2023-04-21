@@ -1,0 +1,3 @@
+#ignore bin files
+#ignore hashing_methods executable
+hashing_methods
