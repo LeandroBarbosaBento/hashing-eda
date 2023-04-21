@@ -1,4 +1,4 @@
 #ignore bin files
-bin/*.o
+bin/
 #ignore hashing_methods executable
 hashing_methods
