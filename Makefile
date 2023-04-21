@@ -1,14 +1,18 @@
 COMPILER=gcc
 
-file_writer:
-	@$(COMPILER) -c src/file_writer/*.c -Iinclude/ -o bin/file_writer.o
-	@echo "Built file_writer.o"
+chaining:
+	@$(COMPILER) -c src/chaining/*.c -Iinclude/ -o bin/chaining.o
+	@echo "Built chaining.o"
 
-free_memory_api:
-	@$(COMPILER) -c src/free_memory_api/*.c -Iinclude/ -o bin/free_memory_api.o 
-	@echo "Built free_memory_api.o"
+double_hashing:
+	@$(COMPILER) -c src/double_hashing/*.c -Iinclude/ -o bin/double_hashing.o
+	@echo "Built double_hashing.o"
+
+linear_probing:
+	@$(COMPILER) -c src/linear_probing/*.c -Iinclude/ -o bin/linear_probing.o
+	@echo "Built linear_probing.o"
 
 project:
 	$(COMPILER) -c src/main.c -Iinclude/ -o bin/main.o
-	@$(COMPILER) bin/free_memory_api.o bin/file_writer.o bin/main.o -o memlogger
-	@echo "Finished building memlogger"
+	@$(COMPILER) bin/chaining.o bin/double_hashing.o bin/linear_probing.o bin/main.o -o hashing_methods
+	@echo "Finished building hashing_methods"
