@@ -22,7 +22,7 @@ chaining_hashing_t create_chaining_hashing(int n);
 
 chaining_hashing_t * insert_chaining_hashing(chaining_hashing_t * x, int key);
 
-chaining_hashing_t * get_avarage_chaining_hashing(chaining_hashing_t * x);
+float get_avarage_chaining_hashing(chaining_hashing_t * x);
 
 chaining_hashing_t * update_lat_empty_position_chaining_hashing(chaining_hashing_t * x);
 

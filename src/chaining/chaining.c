@@ -83,9 +83,9 @@ chaining_hashing_t * insert_chaining_hashing(chaining_hashing_t * x, int key)
     return x;
 }
 
-chaining_hashing_t * get_avarage_chaining_hashing(chaining_hashing_t * x)
+float get_avarage_chaining_hashing(chaining_hashing_t * x)
 {
-    return x;
+    return (float) x->total_access / x->number_of_keys;
 }
 
 void show_data_chaining_hashing(chaining_hashing_t * x)
@@ -98,6 +98,9 @@ void show_data_chaining_hashing(chaining_hashing_t * x)
     for(int i = 0; i < x->size; i++){
         printf("position %d: k: %d | pt: %d | is_empty: %d\n", i,x->v[i].key,  x->v[i].pointer, x->v[i].is_empty);
     }
+    
+    if(x->total_access != 0)
+        printf("avarage access: %.3f\n", get_avarage_chaining_hashing(x));
 }
 
 void menu_chaining_hashing()

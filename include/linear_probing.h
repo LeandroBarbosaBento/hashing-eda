@@ -20,7 +20,7 @@ linear_probing_hashing_t create_linear_probing_hashing(int n);
 
 linear_probing_hashing_t * insert_linear_probing_hashing(linear_probing_hashing_t * x, int key);
 
-linear_probing_hashing_t * get_avarage_linear_probing_hashing(linear_probing_hashing_t * x);
+float get_avarage_linear_probing_hashing(linear_probing_hashing_t * x);
 
 void show_data_linear_probing_hashing(linear_probing_hashing_t * x);
 

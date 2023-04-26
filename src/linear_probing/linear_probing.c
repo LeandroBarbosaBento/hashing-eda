@@ -38,6 +38,7 @@ linear_probing_hashing_t * insert_linear_probing_hashing(linear_probing_hashing_
     }
     else {
         i=h;
+
         while(!x->v[i].is_empty)
         {
             i++;     //pro hashing duplo, colocar i+h2, que é a quantidade de pulos
@@ -47,11 +48,15 @@ linear_probing_hashing_t * insert_linear_probing_hashing(linear_probing_hashing_
 
         x->v[i].key = key;
         x->v[i].is_empty = 0;
-
     }
     
     return x;
 }
+
+float get_avarage_linear_probing_hashing(linear_probing_hashing_t * x){
+    return (float) x->total_access / x->number_of_keys;
+}
+
 
 void show_data_linear_probing_hashing(linear_probing_hashing_t * x)
 {
@@ -62,6 +67,9 @@ void show_data_linear_probing_hashing(linear_probing_hashing_t * x)
     for(int i = 0; i < x->size; i++){
         printf("position %d: k: %d | is_empty: %d\n", i,x->v[i].key, x->v[i].is_empty);
     }
+
+    if(x->total_access != 0)
+        printf("avarage access: %.3f\n", get_avarage_linear_probing_hashing(x));
 }
 
 
