@@ -89,11 +89,6 @@ chaining_hashing_t * get_avarage_chaining_hashing(chaining_hashing_t * x)
     return x;
 }
 
-chaining_hashing_t * update_lat_empty_position_chaining_hashing(chaining_hashing_t * x)
-{
-    return x;
-}
-
 void menu_chaining_hashing()
 {
 
