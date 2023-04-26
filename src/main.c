@@ -3,7 +3,6 @@
 #include "linear_probing.h"
 
 
-#include <unistd.h>
 
 int main() {
 
@@ -36,5 +35,5 @@ int main() {
     for(int i = 0; i < n; i++){
         printf("position %d: k: %d | pt: %d | is_empty: %d\n", i,chaining_hashing.v[i].key,  chaining_hashing.v[i].pointer, chaining_hashing.v[i].is_empty);
     }
-    printf("Test\n");
+    printf("\n");
 }

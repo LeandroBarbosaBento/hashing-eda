@@ -4,17 +4,16 @@ chaining_hashing_t create_chaining_hashing(int n)
 {
     chaining_hashing_t x;
 
-    x.v = malloc( (n-1) * sizeof(chaining_item_t) );
+    x.v = malloc( (n) * sizeof(chaining_item_t) );
     x.last_empty_position = n - 1;
     x.total_access = 0;
     x.size = n;
     x.number_of_keys = 0;
     
-    printf("Teste n   : %d\n", n);
-
-    for(int i = 0; i <= n; i++){
+    for(int i = 0; i < n; i++){
         x.v[i].pointer = -1;
         x.v[i].is_empty = 1;
+        x.v[i].key = -1;
     }
 
     return x;
