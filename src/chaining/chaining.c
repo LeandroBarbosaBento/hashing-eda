@@ -88,6 +88,18 @@ chaining_hashing_t * get_avarage_chaining_hashing(chaining_hashing_t * x)
     return x;
 }
 
+void show_data_chaining_hashing(chaining_hashing_t * x)
+{
+    printf("total_access: %d\n", x->total_access);
+    printf("size: %d\n", x->size);
+    printf("last_empty_position: %d\n", x->last_empty_position);
+    printf("number_of_keys: %d\n", x->number_of_keys);
+
+    for(int i = 0; i < x->size; i++){
+        printf("position %d: k: %d | pt: %d | is_empty: %d\n", i,x->v[i].key,  x->v[i].pointer, x->v[i].is_empty);
+    }
+}
+
 void menu_chaining_hashing()
 {
 
