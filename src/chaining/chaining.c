@@ -8,6 +8,7 @@ chaining_hashing_t create_chaining_hashing(int n)
     x.last_empty_position = n - 1;
     x.total_access = 0;
     x.size = n;
+    x.number_of_keys = 0;
     
     printf("Teste n   : %d\n", n);
 
@@ -37,6 +38,8 @@ chaining_hashing_t * insert_chaining_hashing(chaining_hashing_t * x, int key)
         printf("The file is full, cannot continue the insertion!");
         return x;
     }
+
+    x->number_of_keys++;
 
     int h;
     int pointer;

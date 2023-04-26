@@ -15,6 +15,7 @@ typedef struct chaining_hashing {
   int size;
   chaining_item_t *v;
   int last_empty_position;
+  int number_of_keys;
 } chaining_hashing_t;
 
 chaining_hashing_t create_chaining_hashing(int n);
