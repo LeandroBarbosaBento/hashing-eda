@@ -20,6 +20,37 @@ double_hashing_t create_double_hashing(int n)
     return x;
 }
 
+double_hashing_t * insert_double_hashing(double_hashing_t * x, int key)
+{
+    if(x->size == x->number_of_keys)
+    {
+        printf("The file is full, cannot continue the insertion!");
+        return x;
+    }
+
+    x->number_of_keys++;
+
+    int h_one;
+    h_one = key % x->size;
+
+    int h_two;
+    h_two = key / x->size;
+    if (key < x->size) h_two = 1;
+
+    if(x->v[h_one].is_empty)
+    {
+        x->v[h_one].is_empty = 0;
+        x->v[h_one].key = key;
+
+        x->total_access++;
+    }
+    else
+    {
+
+    }
+}
+
+
 void show_data_double_hashing(double_hashing_t * x)
 {
     printf("total_access: %d\n", x->total_access);

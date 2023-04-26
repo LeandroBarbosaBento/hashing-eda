@@ -6,34 +6,45 @@
 
 int main() {
 
-    chaining_hashing_t chaining_hashing;
+    /***********CHAINING HASHING*********/
+
+    /* chaining_hashing_t chaining_hashing;
 
     int n = 11;
 
     chaining_hashing = create_chaining_hashing(n);
 
-    printf("total_access: %d\n", chaining_hashing.total_access);
-    printf("size: %d\n", chaining_hashing.size);
-    printf("last_empty_position: %d\n", chaining_hashing.last_empty_position);
-    printf("number_of_keys: %d\n", chaining_hashing.number_of_keys);
-
-    for(int i = 0; i < n; i++){
-        printf("position %d: k: %d | pt: %d | is_empty: %d\n", i,chaining_hashing.v[i].key,  chaining_hashing.v[i].pointer, chaining_hashing.v[i].is_empty);
-    }
-
-    printf("\n\nAPÓS INSERIR 5, 16 e 27: \n\n");
+    show_data_chaining_hashing(&chaining_hashing);
 
     insert_chaining_hashing(&chaining_hashing, 5);
     insert_chaining_hashing(&chaining_hashing, 16);
     insert_chaining_hashing(&chaining_hashing, 27);
 
-    printf("total_access: %d\n", chaining_hashing.total_access);
-    printf("size: %d\n", chaining_hashing.size);
-    printf("last_empty_position: %d\n", chaining_hashing.last_empty_position);
-    printf("number_of_keys: %d\n", chaining_hashing.number_of_keys);
+    printf("\n\nAPÓS INSERIR 5, 16 e 27: \n\n");
 
-    for(int i = 0; i < n; i++){
-        printf("position %d: k: %d | pt: %d | is_empty: %d\n", i,chaining_hashing.v[i].key,  chaining_hashing.v[i].pointer, chaining_hashing.v[i].is_empty);
-    }
+    show_data_chaining_hashing(&chaining_hashing);
+
+    printf("\n"); */
+
+
+
+    /***********DOUBLE HASHING*********/
+
+    double_hashing_t double_hashing;
+
+    int n = 11;
+
+    double_hashing = create_double_hashing(n);
+
+    show_data_double_hashing(&double_hashing);
+
+    insert_double_hashing(&double_hashing, 5);
+    //insert_double_hashing(&double_hashing, 16);
+    insert_double_hashing(&double_hashing, 27);
+
+    printf("\n\nAPÓS INSERIR 5, 16 e 27: \n\n");
+
+    show_data_double_hashing(&double_hashing);
+
     printf("\n");
 }
