@@ -50,7 +50,7 @@ int main() {
 
     /***********LINEAR PROBING HASHING*********/
 
-    int n = 11;
+    /* int n = 11;
     linear_probing_hashing_t linear_probing_hashing;
 
     printf("Criando linear hashing...\n");
@@ -67,5 +67,27 @@ int main() {
 
     printf("\nInseriu 5, 8, 19, 30, 52 \n");
 
-    show_data_linear_probing_hashing(&linear_probing_hashing);
+    show_data_linear_probing_hashing(&linear_probing_hashing); */
+
+
+    /***********DOUBLE HASHING*********/
+
+    int n = 11;
+    double_hashing_t double_hashing;
+
+    printf("Criando double hashing...\n");
+
+    double_hashing = create_double_hashing(n);
+
+    show_data_double_hashing(&double_hashing);
+
+    insert_double_hashing(&double_hashing, 5);
+    insert_double_hashing(&double_hashing, 8);
+    insert_double_hashing(&double_hashing, 19);
+    insert_double_hashing(&double_hashing, 30);
+    insert_double_hashing(&double_hashing, 52);
+
+    printf("\nInseriu 5, 8, 19, 30, 52 \n");
+
+    show_data_double_hashing(&double_hashing);
 }

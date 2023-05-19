@@ -30,6 +30,9 @@ double_hashing_t * insert_double_hashing(double_hashing_t * x, int key)
 
     x->number_of_keys++;
 
+    int i;
+    i = 0;
+
     int h_one;
     h_one = key % x->size;
 
@@ -46,7 +49,23 @@ double_hashing_t * insert_double_hashing(double_hashing_t * x, int key)
     }
     else
     {
+        i = h_one;
+        while(!x->v[i].is_empty)
+        {
+            i += h_two;
+            if(i > x->size-1) i = i - x->size; 
+            x->total_access++;
 
+            if (i == h_one) break; 
+        }
+
+        if (i != h_one)
+        {
+            x->v[i].key = key;
+            x->v[i].is_empty = 0;
+        }
+
+        
     }
 }
 

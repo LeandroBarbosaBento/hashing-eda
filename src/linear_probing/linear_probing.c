@@ -41,13 +41,17 @@ linear_probing_hashing_t * insert_linear_probing_hashing(linear_probing_hashing_
 
         while(!x->v[i].is_empty)
         {
-            i++;     //pro hashing duplo, colocar i+h2, que é a quantidade de pulos
+            i++;
             if(i > x->size-1) i=0; 
             x->total_access++;
         }
 
-        x->v[i].key = key;
-        x->v[i].is_empty = 0;
+        if (i != h)
+        {
+            x->v[i].key = key;
+            x->v[i].is_empty = 0;
+        }
+
     }
     
     return x;
