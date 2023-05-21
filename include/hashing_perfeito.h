@@ -30,6 +30,7 @@ typedef struct hashP {
     int size;
     hashP_item_t *v;
     int last_empty_position;
+    int number_of_keys;
 } hashing_perfeito_t;
 
 hashing_perfeito_t create_hashing_perfeito(int n, int maiorChave);
@@ -40,10 +41,10 @@ hashing_perfeito_t *get_avarage_hashing_perfeito(hashing_perfeito_t *x);
 
 hashing_perfeito_t * update_lat_empty_position_hashing_perfeito(hashing_perfeito_t *x);
 
+void show_data_hashing_perfeito(hashing_perfeito_t *x);
+
 int numeroB(int numElem);
 
 int numero(int numElem);
-
-void menu_hashing_perfeito();
 
 #endif

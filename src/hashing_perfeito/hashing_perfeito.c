@@ -40,6 +40,7 @@ hashing_perfeito_t create_hashing_perfeito(int n, int maiorChave)
 
     x.v = malloc( (n) * sizeof(hashing_perfeito_t) );
     x.total_access = 0;
+    x.number_of_keys = 0;
     x.size = n;
     x.primo = gerarPrimo(maiorChave);
     x.a = numeroA(x.primo);
@@ -73,15 +74,16 @@ hashing_perfeito_t* insert_hashing_perfeito(hashing_perfeito_t *x , int key)
         x->v[h].m = 1;
         x->v[h].size = 1;
         x->total_access++;
+        x->number_of_keys++;
     }
     else
     {
         int h2;
-        
 
+        x->number_of_keys++;
+        x->total_access += 2;
         x->v[h].size = x->v[h].size + 1;
         x->v[h].m = (x->v[h].size * x->v[h].size);
-        printf("x->v[h].m: %d\n", x->v[h].m);
 
         int vetAux[x->v[h].m];
         int *vetAux2 = malloc( (x->v[h].m) * sizeof(hashing_perfeito_t) );
@@ -129,7 +131,28 @@ int buscaHashingPerfeito(hashing_perfeito_t *x, int key){
     else return -1;
 }
 
-void menu_hashing_perfeito()
-{
+void show_data_hashing_perfeito(hashing_perfeito_t *x){
+  printf("\n*****HASHING PERFEITO*****\n");
+  printf("value a: %d\n", x->a);
+  printf("value b: %d\n", x->b);
+  printf("value prime: %d\n", x->primo);
+  printf("total_access: %d\n", x->total_access);
+  printf("number_of_keys: %d\n", x->number_of_keys);
+  printf("avarage access: %d\n", x->total_access/ x->number_of_keys);
 
+  printf("Table\n");
+  int i, j;
+  for(i=0; i<x->m; i++){
+    printf("[%d]:", i);
+    if(x->v[i].is_empty!=1){
+       
+      for(j=0; j<x->v[i].m; j++){
+        printf("[%d]", x->v[i].key[j]);
+      }
+      printf(" ___ ");
+      printf("a2: %d,", x->v[i].a);
+      printf(" b2: %d", x->v[i].b);
+    }
+    printf("\n");
+  }
 }

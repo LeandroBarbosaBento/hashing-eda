@@ -77,9 +77,3 @@ void show_data_linear_probing_hashing(linear_probing_hashing_t * x)
     if(x->total_access != 0)
         printf("avarage access: %.3f\n", get_avarage_linear_probing_hashing(x));
 }
-
-
-void menu_linear_probing_hashing()
-{
-
-}

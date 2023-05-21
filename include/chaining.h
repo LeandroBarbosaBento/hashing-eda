@@ -28,7 +28,4 @@ chaining_hashing_t * update_lat_empty_position_chaining_hashing(chaining_hashing
 
 void show_data_chaining_hashing(chaining_hashing_t * x);
 
-void menu_chaining_hashing();
-
-
 #endif

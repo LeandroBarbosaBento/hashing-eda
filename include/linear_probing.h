@@ -24,6 +24,4 @@ float get_avarage_linear_probing_hashing(linear_probing_hashing_t * x);
 
 void show_data_linear_probing_hashing(linear_probing_hashing_t * x);
 
-void menu_linear_probing_hashing();
-
 #endif

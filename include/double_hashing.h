@@ -24,7 +24,4 @@ double_hashing_t * get_avarage_double_hashing(double_hashing_t * x);
 
 void show_data_double_hashing(double_hashing_t * x);
 
-void menu_double_hashing();
-
-
 #endif

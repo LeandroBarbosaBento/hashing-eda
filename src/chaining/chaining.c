@@ -103,8 +103,3 @@ void show_data_chaining_hashing(chaining_hashing_t * x)
     if(x->total_access != 0)
         printf("avarage access: %.3f\n", get_avarage_chaining_hashing(x));
 }
-
-void menu_chaining_hashing()
-{
-
-}

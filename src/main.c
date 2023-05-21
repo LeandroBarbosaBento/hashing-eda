@@ -49,11 +49,13 @@ int main(int argc, char *argv[]) {
         insert_chaining_hashing(&chaining_hashing, number);
         insert_linear_probing_hashing(&linear_probing_hashing, number);
         insert_double_hashing(&double_hashing, number);
+        insert_hashing_perfeito(&hashing_perfeito, number);
     }
 
     show_data_chaining_hashing(&chaining_hashing);
     show_data_linear_probing_hashing(&linear_probing_hashing);
     show_data_double_hashing(&double_hashing);
+    show_data_hashing_perfeito(&hashing_perfeito);
 
     return 0;
 }
