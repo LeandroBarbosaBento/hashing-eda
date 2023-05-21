@@ -20,7 +20,7 @@ double_hashing_t create_double_hashing(int n);
 
 double_hashing_t * insert_double_hashing(double_hashing_t * x, int key);
 
-double_hashing_t * get_avarage_double_hashing(double_hashing_t * x);
+float get_avarage_double_hashing(double_hashing_t * x);
 
 void show_data_double_hashing(double_hashing_t * x);
 

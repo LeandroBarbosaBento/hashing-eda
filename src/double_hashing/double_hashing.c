@@ -67,6 +67,10 @@ double_hashing_t * insert_double_hashing(double_hashing_t * x, int key)
     }
 }
 
+float get_avarage_double_hashing(double_hashing_t * x)
+{
+    return (float) x->total_access / x->number_of_keys;
+}
 
 void show_data_double_hashing(double_hashing_t * x)
 {
@@ -78,4 +82,6 @@ void show_data_double_hashing(double_hashing_t * x)
     for(int i = 0; i < x->size; i++){
         printf("position %d: k: %d | is_empty: %d\n", i,x->v[i].key, x->v[i].is_empty);
     }
+    if(x->total_access != 0)
+        printf("avarage access: %.3f\n", get_avarage_double_hashing(x));
 }
