@@ -40,11 +40,8 @@ int main(int argc, char *argv[]) {
     }
 
     chaining_hashing = create_chaining_hashing(hashing_file_size);
-    printf("Teste 01 \n");
     double_hashing = create_double_hashing(hashing_file_size);
-    printf("Teste 02 \n");
     linear_probing_hashing = create_linear_probing_hashing(hashing_file_size);
-    printf("Teste 03 \n");
     hashing_perfeito =  create_hashing_perfeito(hashing_file_size, 100000);
 
     while ((charRead = getline(&data, &size, file)) != -1) {

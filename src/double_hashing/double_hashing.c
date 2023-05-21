@@ -70,6 +70,7 @@ double_hashing_t * insert_double_hashing(double_hashing_t * x, int key)
 
 void show_data_double_hashing(double_hashing_t * x)
 {
+    printf("\n***** DOUBLE HASHING REPORT ***\n");
     printf("total_access: %d\n", x->total_access);
     printf("size: %d\n", x->size);
     printf("number_of_keys: %d\n", x->number_of_keys);

@@ -7,6 +7,7 @@ linear_probing_hashing_t create_linear_probing_hashing(int n)
     x.v = malloc( (n) * sizeof(linear_probing_item_t) ); 
     x.total_access = 0;
     x.size = n;
+    x.number_of_keys = 0;
 
     for(int i = 0; i < n; i++){
         x.v[i].is_empty = 1;
@@ -64,6 +65,7 @@ float get_avarage_linear_probing_hashing(linear_probing_hashing_t * x){
 
 void show_data_linear_probing_hashing(linear_probing_hashing_t * x)
 {
+    printf("\n***** LINEAR PROBING REPORT ***\n");
     printf("total_access: %d\n", x->total_access);
     printf("size: %d\n", x->size);
     printf("number_of_keys: %d\n", x->number_of_keys);

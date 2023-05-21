@@ -90,6 +90,7 @@ float get_avarage_chaining_hashing(chaining_hashing_t * x)
 
 void show_data_chaining_hashing(chaining_hashing_t * x)
 {
+    printf("\n***** CHAINING HASHING REPORT ***\n");
     printf("total_access: %d\n", x->total_access);
     printf("size: %d\n", x->size);
     printf("last_empty_position: %d\n", x->last_empty_position);
