@@ -10,9 +10,7 @@ double_hashing_t create_double_hashing(int n)
     x.size = n;
     x.number_of_keys = 0;
     
-    printf("Teste n   : %d\n", n);
-
-    for(int i = 0; i <= n; i++){
+    for(int i = 0; i < n; i++){
         x.v[i].is_empty = 1;
         x.v[i].key = -1;
     }

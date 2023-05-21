@@ -8,7 +8,7 @@ linear_probing_hashing_t create_linear_probing_hashing(int n)
     x.total_access = 0;
     x.size = n;
 
-    for(int i = 0; i <= n; i++){
+    for(int i = 0; i < n; i++){
         x.v[i].is_empty = 1;
         x.v[i].key = -1;
     }
