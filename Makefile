@@ -7,6 +7,8 @@ chaining:
 	@echo "Built double_hashing.o"
 	@$(COMPILER) -c src/linear_probing/*.c -Iinclude/ -o bin/linear_probing.o
 	@echo "Built linear_probing.o"
+	@$(COMPILER) -c src/hashing_perfeito/*.c -Iinclude/ -o bin/hashing_perfeito.o
+	@echo "Built hashing_perfeito.o"
 	$(COMPILER) -c src/main.c -Iinclude/ -o bin/main.o
-	@$(COMPILER) bin/chaining.o bin/double_hashing.o bin/linear_probing.o bin/main.o -o hashing_methods
+	@$(COMPILER) bin/chaining.o bin/double_hashing.o bin/linear_probing.o bin/hashing_perfeito.o bin/main.o -o hashing_methods
 	@echo "Finished building hashing_methods"
