@@ -68,8 +68,8 @@ hashing_perfeito_t* insert_hashing_perfeito(hashing_perfeito_t *x , int key)
         x->v[h].key = malloc( (1) * sizeof(hashing_perfeito_t) );
         x->v[h].is_empty = 0;
         x->v[h].key[0] = key;
-        x->v[h].a = numeroA(x->primo);
-        x->v[h].b = numeroB(x->primo);
+        x->v[h].a = numeroA(x->primo - key);
+        x->v[h].b = numeroB(x->primo - key);
         x->v[h].m = 1;
         x->v[h].size = 1;
         x->total_access++;
