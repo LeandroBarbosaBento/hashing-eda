@@ -51,7 +51,7 @@ double_hashing_t * insert_double_hashing(double_hashing_t * x, int key)
         while(!x->v[i].is_empty)
         {
             i += h_two;
-            if(i > x->size-1) i = i - x->size; 
+            while(i > x->size-1) i = i - x->size; 
             x->total_access++;
 
             if (i == h_one) break; 
