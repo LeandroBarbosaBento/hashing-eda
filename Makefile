@@ -1,6 +1,6 @@
 COMPILER=gcc
 
-chaining:
+hashing:
 	@$(COMPILER) -c src/chaining/*.c -Iinclude/ -o bin/chaining.o
 	@echo "Built chaining.o"
 	@$(COMPILER) -c src/double_hashing/*.c -Iinclude/ -o bin/double_hashing.o
