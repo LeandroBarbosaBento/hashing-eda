@@ -37,8 +37,6 @@ hashing_perfeito_t create_hashing_perfeito(int n, int maiorChave);
 
 hashing_perfeito_t *insert_hashing_perfeito(hashing_perfeito_t *x, int key);
 
-hashing_perfeito_t *get_avarage_hashing_perfeito(hashing_perfeito_t *x);
-
 hashing_perfeito_t * update_lat_empty_position_hashing_perfeito(hashing_perfeito_t *x);
 
 void show_data_hashing_perfeito(hashing_perfeito_t *x);
@@ -47,4 +45,5 @@ int numeroB(int numElem);
 
 int numero(int numElem);
 
+float get_avarage_hashing_perfeito(hashing_perfeito_t * x);
 #endif

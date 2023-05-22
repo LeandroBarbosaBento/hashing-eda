@@ -131,6 +131,11 @@ int buscaHashingPerfeito(hashing_perfeito_t *x, int key){
     else return -1;
 }
 
+float get_avarage_hashing_perfeito(hashing_perfeito_t * x)
+{
+    return (float) x->total_access / x->number_of_keys;
+}
+
 void show_data_hashing_perfeito(hashing_perfeito_t *x){
   printf("\n*****HASHING PERFEITO*****\n");
   printf("value a: %d\n", x->a);
@@ -138,7 +143,8 @@ void show_data_hashing_perfeito(hashing_perfeito_t *x){
   printf("value prime: %d\n", x->primo);
   printf("total_access: %d\n", x->total_access);
   printf("number_of_keys: %d\n", x->number_of_keys);
-  printf("avarage access: %d\n", x->total_access/ x->number_of_keys);
+  if(x->total_access != 0)
+        printf("avarage access: %.3f\n", get_avarage_hashing_perfeito(x));
 
   printf("Table\n");
   int i, j;
